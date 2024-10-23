@@ -1,0 +1,13 @@
+body {
+  background-color: #ffffff;
+}
+
+.greenDiv {
+  background-color: green;
+  color: azure;
+  font-size: 28px;
+  padding: 20px;
+  border: 10px solid #ffaa00;
+  margin: 10px;
+  font-family: sans-serif;
+}
