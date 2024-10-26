@@ -7,6 +7,7 @@
 - [Setup Remote Git](#setup-remote-git)
 - [Git Lifecycle](#git-lifecycle)
 - [Unstage Files](#unstage-files)
+- [Restore File Change](#restore-file-change)
 
 <br>
 
@@ -29,6 +30,8 @@
 | 13  | git restore --staged [filename]    | Stage хийсэн файлыг буцааж болиулна                                         |
 | 14  | git reset head [filename]          | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                          |
 | 15  | git rm --cached [filename]         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                         |
+| 16  | git restore [filename]             | Өөрчилсөн файлыг буцааж болиулна                                            |
+| 17  | git checkout -- [filename]         | Өөрчилсөн файлыг буцааж болиулна                                            |
 
 <br>
 
@@ -110,8 +113,21 @@ Stage хийсэн файлуудыг болиулах 3 арга байдаг
 > [!NOTE]
 >
 > - git restore --staged [filename]
-> - git restore --staged [filename]
+> - git reset head [filename]
 > - git rm --cached [filename]
+
+[Go top](#table-of-contents)
+
+<br>
+
+#### Restore File Change
+
+Өөрчилсөн folder эсвэл file -ыг буцааж болиулах 2 арга байдаг
+
+> [!NOTE]
+>
+> - git restore [filename]
+> - git checkout -- [filename]
 
 [Go top](#table-of-contents)
 
