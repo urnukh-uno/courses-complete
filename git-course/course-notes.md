@@ -32,6 +32,7 @@
 | 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                         |
 | 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                            |
 | 17  | `git checkout -- [filename]`         | Өөрчилсөн файлыг буцааж болиулна                                            |
+| 18  | `git cat-file -p [sha1 has]`         | Log доторх файлыг дэлгэрүүлж харна                                          |
 
 <br>
 
