@@ -9,7 +9,7 @@
 - [Unstage Files](#unstage-files)
 - [Restore File Change](#restore-file-change)
 - [Restore Commits](#restore-commits)
-- [Head Branch](#head-branch)
+- [Git Branch](#git-branch)
 
 <br>
 
@@ -40,6 +40,10 @@
 | 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ                   |
 | 22  | `cat [filename]`                     | Файл доторх контентыг харна                                                            |
 | 23  | `cat .git/head`                      | HEAD файл дотор одоогийн branch (head) аль "sha1hash" хувилбарыг зааж байгааг харуулна |
+| 24  | `git branch`                         | Ямар branch -ууд манай repo дотор байгааг харуулна                                     |
+| 25  | `git branch [brancname]`             | Repo дотор шинэ branch үүсгэнэ                                                         |
+| 26  | `git branch -m [oldName] [newName]`  | Branch -ын нэрийг өөрчилнө                                                             |
+| 27  | `git branch d [branchName]`          | Branch -ыг устгана                                                                     |
 
 <br>
 
@@ -154,15 +158,19 @@ Stage хийсэн файлуудыг болиулах 3 арга байдаг
 
 <br>
 
-#### Head Branch
+#### Git Branch
 
-Developer -ын ажиллаж буй Branch -ыг .git файл дотроос харахыг сурна.
+Developer -ын ажиллаж буй Branch -ыг .git файл дотроос харна. `git branch div` гэсэн script -ээр шинэ div branch үүсгэнэ. Branch -ийн нэрийг `git branch -m [oldBranchName] [newBranchName]` гэж өөрчилнө. `git branch d [BranchName]` гэсэн command -аар branch -ийг устгана.
 
 > [!NOTE]
 >
 > - cat .git/HEAD
 > - cat [filename]
 > - cd .git/refs/heads/master
+> - git branch
+> - git branch [branchName]
+> - git branch -m [oldName] [newName]
+> - git branch d [branchName]
 
 [Go top](#table-of-contents)
 
