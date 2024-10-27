@@ -36,6 +36,7 @@
 | 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                          |
 | 19  | `git checkout [sha1 hash]`           | Log доторх файлыг дэлгэрүүлж харна                                          |
 | 20  | `git checkout master`                | Log доторх файлыг дэлгэрүүлж харна                                          |
+| 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ        |
 
 <br>
 
