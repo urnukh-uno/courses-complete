@@ -9,34 +9,37 @@
 - [Unstage Files](#unstage-files)
 - [Restore File Change](#restore-file-change)
 - [Restore Commits](#restore-commits)
+- [Head Branch](#head-branch)
 
 <br>
 
 ### Common Git Commands
 
-|     | Git коммандууд                       | Тайлбар                                                                     |
-| :-: | :----------------------------------- | :-------------------------------------------------------------------------- |
-|  1  | `brew install git`                   | Homebrew буюу package manager ашиглан Git татаж суулгана                    |
-|  2  | `git init`                           | .Git file -ийг төсөл дотроо үүсгэнэ                                         |
-|  3  | `git status`                         | Төслийн өөрчлөлтийг track хийнэ                                             |
-|  4  | `ls -lah`                            | Төсөлтэй холбоотой Git -ийн тохиргоог шалгана                               |
-|  5  | `rm -rf .git`                        | Төсөл дотор үүсгэсэн .Git file болон түүний тохиргоо тэр чигтэй устна       |
-|  6  | `git remote -v`                      | Локал төсөл маань remote repository линктэй холбогдсоныг шалгаж харуулна    |
-|  7  | `git remote add origin [HTTPS линк]` | Локал төсөлтэй remote repository линкийг холбоно                            |
-|  8  | `git add -A`                         | Төсөл дээр хийгдсэн бүх шинэчлэлтийг локал git дээр нэмнэ                   |
-|  9  | `git commit -m "тайлбар"`            | Локал git дээр нэмсэн бүх өөрчлөлтийг өөрчлөлт болгож баталгаажуулна        |
-| 10  | `git push origin master`             | Локал git дээр баталгаажсан бүх өөрчлөлтийг Github repo -той merge хийнэ    |
-| 11  | `git checkout -- .`                  | Локал git дээр хамгийн сүүлд байсан хувилбарын дагуу бүх файлуудыг сэргээнэ |
-| 12  | `rm [filename]`                      | Terminal -аар файл устгана                                                  |
-| 13  | `git restore --staged [filename]`    | Stage хийсэн файлыг буцааж болиулна                                         |
-| 14  | `git reset head [filename]`          | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                          |
-| 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                         |
-| 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                            |
-| 17  | `git checkout -- [filename]`         | Өөрчилсөн файлыг буцааж болиулна                                            |
-| 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                          |
-| 19  | `git checkout [sha1 hash]`           | Log доторх файлыг дэлгэрүүлж харна                                          |
-| 20  | `git checkout master`                | Log доторх файлыг дэлгэрүүлж харна                                          |
-| 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ        |
+|     | Git коммандууд                       | Тайлбар                                                                                |
+| :-: | :----------------------------------- | :------------------------------------------------------------------------------------- |
+|  1  | `brew install git`                   | Homebrew буюу package manager ашиглан Git татаж суулгана                               |
+|  2  | `git init`                           | .Git file -ийг төсөл дотроо үүсгэнэ                                                    |
+|  3  | `git status`                         | Төслийн өөрчлөлтийг track хийнэ                                                        |
+|  4  | `ls -lah`                            | Төсөлтэй холбоотой Git -ийн тохиргоог шалгана                                          |
+|  5  | `rm -rf .git`                        | Төсөл дотор үүсгэсэн .Git file болон түүний тохиргоо тэр чигтэй устна                  |
+|  6  | `git remote -v`                      | Локал төсөл маань remote repository линктэй холбогдсоныг шалгаж харуулна               |
+|  7  | `git remote add origin [HTTPS линк]` | Локал төсөлтэй remote repository линкийг холбоно                                       |
+|  8  | `git add -A`                         | Төсөл дээр хийгдсэн бүх шинэчлэлтийг локал git дээр нэмнэ                              |
+|  9  | `git commit -m "тайлбар"`            | Локал git дээр нэмсэн бүх өөрчлөлтийг өөрчлөлт болгож баталгаажуулна                   |
+| 10  | `git push origin master`             | Локал git дээр баталгаажсан бүх өөрчлөлтийг Github repo -той merge хийнэ               |
+| 11  | `git checkout -- .`                  | Локал git дээр хамгийн сүүлд байсан хувилбарын дагуу бүх файлуудыг сэргээнэ            |
+| 12  | `rm [filename]`                      | Terminal -аар файл устгана                                                             |
+| 13  | `git restore --staged [filename]`    | Stage хийсэн файлыг буцааж болиулна                                                    |
+| 14  | `git reset head [filename]`          | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                                     |
+| 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                                    |
+| 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                                       |
+| 17  | `git checkout -- [filename]`         | Өөрчилсөн файлыг буцааж болиулна                                                       |
+| 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                                     |
+| 19  | `git checkout [sha1 hash]`           | Log доторх файлыг дэлгэрүүлж харна                                                     |
+| 20  | `git checkout master`                | Log доторх файлыг дэлгэрүүлж харна                                                     |
+| 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ                   |
+| 22  | `cat [filename]`                     | Файл доторх контентыг харна                                                            |
+| 23  | `cat .git/head`                      | HEAD файл дотор одоогийн branch (head) аль "sha1hash" хувилбарыг зааж байгааг харуулна |
 
 <br>
 
@@ -146,6 +149,20 @@ Stage хийсэн файлуудыг болиулах 3 арга байдаг
 >
 > - git checkout [sha1 hash]
 > - git checkout master
+
+[Go top](#table-of-contents)
+
+<br>
+
+#### Head Branch
+
+Developer -ын ажиллаж буй Branch -ыг .git файл дотроос харахыг сурна.
+
+> [!NOTE]
+>
+> - cat .git/HEAD
+> - cat [filename]
+> - cd .git/refs/heads/master
 
 [Go top](#table-of-contents)
 
