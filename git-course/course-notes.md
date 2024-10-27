@@ -8,6 +8,7 @@
 - [Git Lifecycle](#git-lifecycle)
 - [Unstage Files](#unstage-files)
 - [Restore File Change](#restore-file-change)
+- [Restore Commits](#restore-commits)
 
 <br>
 
@@ -32,7 +33,9 @@
 | 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                         |
 | 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                            |
 | 17  | `git checkout -- [filename]`         | Өөрчилсөн файлыг буцааж болиулна                                            |
-| 18  | `git cat-file -p [sha1 has]`         | Log доторх файлыг дэлгэрүүлж харна                                          |
+| 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                          |
+| 19  | `git checkout [sha1 hash]`           | Log доторх файлыг дэлгэрүүлж харна                                          |
+| 20  | `git checkout master`                | Log доторх файлыг дэлгэрүүлж харна                                          |
 
 <br>
 
@@ -129,6 +132,19 @@ Stage хийсэн файлуудыг болиулах 3 арга байдаг
 >
 > - git restore [filename]
 > - git checkout -- [filename]
+
+[Go top](#table-of-contents)
+
+<br>
+
+#### Restore Commits
+
+`git log` ашиглан төслийн бүх commit -уудыг харна. Тухайн commit -уудаас хүссэн цаг үеийг `git checkout [sha1 hash]` script ашиглан дахин сэргээж, тэр үеийн файлын хувилбараас branch үүсгэн ажиллах боломжтой. Эсвэл `git checkout master` script ашиглан хамгийн сүүлийн хувилбар -руу буцаж очих боломжтой.
+
+> [!NOTE]
+>
+> - git checkout [sha1 hash]
+> - git checkout master
 
 [Go top](#table-of-contents)
 
