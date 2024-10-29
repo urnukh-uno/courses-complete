@@ -44,6 +44,7 @@
 | 25  | `git branch [brancname]`             | Repo дотор шинэ branch үүсгэнэ                                                         |
 | 26  | `git branch -m [oldName] [newName]`  | Branch -ын нэрийг өөрчилнө                                                             |
 | 27  | `git branch d [branchName]`          | Branch -ыг устгана                                                                     |
+| 28  | `git branch -d [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
 
 <br>
 
