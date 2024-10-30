@@ -45,6 +45,7 @@
 | 26  | `git branch -m [oldName] [newName]`  | Branch -ын нэрийг өөрчилнө                                                             |
 | 27  | `git branch d [branchName]`          | Branch -ыг устгана                                                                     |
 | 28  | `git branch -d [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
+| 29  | `git checkout div`                   | Div branch -руу master branch -аас switch хийнэ                                        |
 
 <br>
 
