@@ -47,7 +47,7 @@
 | 27  | `git branch -d [branchName]`         | Branch -ыг устгана                                                                     |
 | 28  | `git branch -D [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
 | 29  | `git checkout div`                   | Div branch -руу master branch -аас switch хийнэ                                        |
-| 30  | `git-merge-[branchName]`             | Fast-forward merge: Master branch -аам `git-merge-[branchName]` гэсэн комманд өгнө     |
+| 30  | `git merge [branchName]`             | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө     |
 
 <br>
 
@@ -182,11 +182,11 @@ Developer -ын ажиллаж буй Branch -ыг .git файл дотроос 
 
 #### Git Merge
 
-Master branch дээр ямар ч өөрчлөлт хийлгүйгээр шинэ branch үүсгэж өөрчлөлт хийж явж байгаад merge хийх үед Fast-forward хэлбэрээр хийгддэг. Master branch -аас `git-merge-[branchName]` гэсэн комманд өгнө.
+Master branch дээр ямар ч өөрчлөлт хийлгүйгээр шинэ branch үүсгэж өөрчлөлт хийж явж байгаад merge хийх үед Fast-forward хэлбэрээр хийгддэг. Master branch -аас `git merge [branchName]` гэсэн комманд өгнө.
 
 > [!NOTE]
 >
-> - git-merge-[branchName]
+> - git merge [branchName]
 
 [Go top](#table-of-contents)
 
