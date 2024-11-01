@@ -48,6 +48,7 @@
 | 28  | `git branch -D [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
 | 29  | `git checkout div`                   | Div branch -руу master branch -аас switch хийнэ                                        |
 | 30  | `git merge [branchName]`             | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө     |
+| 31  | `git checkout -b [branchName]`       | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                         |
 
 <br>
 
